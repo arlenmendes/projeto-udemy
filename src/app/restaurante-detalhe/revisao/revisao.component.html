@@ -1,0 +1,22 @@
+<!-- INICIO DO CONTEUDO -->
+<div class="col-xs-12 col-sm-6" *ngFor="let revisao of revisoes | async">
+
+  <div class="box box-solid">
+    <div class="box-header with-border">
+      <span class="review-score pull-right"><i class="fa fa-star"></i> {{revisao.rating}}</span>
+      <div class="user-block">
+        <img *ngIf="revisao.rating < 3" alt="User Image" class="img-circle" src="assets/img/reactions/pissed.png">
+        <img *ngIf="revisao.rating >= 3 && revisao.rating < 4" alt="User Image" class="img-circle" src="assets/img/reactions/soso.png">
+        <img *ngIf="revisao.rating >= 4" alt="User Image" class="img-circle" src="assets/img/reactions/loved.png">
+        <span class="username">{{revisao.name}}</span>
+        <span class="description">{{ revisao.date | date: 'dd/mm/yyyy' }}</span>
+      </div>
+    </div>
+
+    <div class="box-body">
+      <p>Tudo muito bom, entrega no tempo certo</p>
+    </div>
+  </div>
+
+</div>
+<!--FIM DO CONTEUDO -->
