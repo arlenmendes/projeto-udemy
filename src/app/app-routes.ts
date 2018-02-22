@@ -6,6 +6,7 @@ import {RestauranteDetalheComponent} from './restaurante-detalhe/restaurante-det
 import {MenuComponent} from './restaurante-detalhe/menu/menu.component';
 import {RevisaoComponent} from './restaurante-detalhe/revisao/revisao.component';
 import {OrdemCompraComponent} from './ordem-compra/ordem-compra.component';
+import {OrdemCompraResumoComponent} from './ordem-compra-resumo/ordem-compra-resumo.component';
 
 export const ROUTES: Routes = [
   {path: '', component: HomeComponent},
@@ -18,5 +19,6 @@ export const ROUTES: Routes = [
       { path: 'revisao', component: RevisaoComponent}
     ]
   },
-  {path: 'ordem-compra', component: OrdemCompraComponent}
+  {path: 'ordem-compra', component: OrdemCompraComponent},
+  {path: 'ordem-compra-resumo', component: OrdemCompraResumoComponent}
 ]

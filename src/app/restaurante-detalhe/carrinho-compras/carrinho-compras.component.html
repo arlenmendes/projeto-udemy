@@ -30,7 +30,7 @@
         </tbody></table>
     </div>
   </div>
-  <div class="box-footer">
+  <div class="box-footer" *ngIf="itens().length">
     <div class="pull-right">
       <button type="button" (click)="limpar()" class="btn btn-danger"><i class="fa fa-trash"></i> Limpar</button>
       <a [routerLink]="['/ordem-compra']" class="btn btn-success"><i class="fa fa-credit-card"></i> Fechar Pedido</a>

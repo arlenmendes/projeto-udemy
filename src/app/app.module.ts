@@ -19,10 +19,14 @@ import { MenuItemComponent } from './restaurante-detalhe/menu-item/menu-item.com
 import { RevisaoComponent } from './restaurante-detalhe/revisao/revisao.component';
 import {CarrinhoComprasService} from './restaurante-detalhe/carrinho-compras/carrinho-compras.service';
 import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { InputComponent } from './shared/input/input.component';
 import { RadioComponent } from './shared/radio/radio.component';
 import { OrdemItemComponent } from './ordem-compra/ordem-item/ordem-item.component';
+import {OrdemCompraService} from './ordem-compra/ordem-compra.service';
+import { CustosEntregaComponent } from './ordem-compra/custos-entrega/custos-entrega.component';
+import { OrdemCompraResumoComponent } from './ordem-compra-resumo/ordem-compra-resumo.component';
+import { AvaliacaoComponent } from './shared/avaliacao/avaliacao.component';
 
 
 @NgModule({
@@ -42,14 +46,18 @@ import { OrdemItemComponent } from './ordem-compra/ordem-item/ordem-item.compone
     InputComponent,
     RadioComponent,
     OrdemItemComponent,
+    CustosEntregaComponent,
+    OrdemCompraResumoComponent,
+    AvaliacaoComponent,
   ],
   imports: [
     BrowserModule,
     HttpModule,
     RouterModule.forRoot(ROUTES),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [RestaurantesService, CarrinhoComprasService, {provide: LOCALE_ID, useValue: 'pt-BR'}],
+  providers: [RestaurantesService, CarrinhoComprasService, OrdemCompraService, {provide: LOCALE_ID, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

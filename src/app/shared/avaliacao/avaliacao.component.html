@@ -1,0 +1,9 @@
+<i
+  class="fa" *ngFor="let a of avaliacoes"
+  [class.fa-star]="a <= avaliacao"
+  [class.fa-star-o]="a > avaliacao"
+  (click)="setAvaliacao(a)"
+  (mouseenter)="setPreviaAvaliacao(a)"
+  (mouseleave)="removePreviaAvaliacao()"
+  >
+</i>

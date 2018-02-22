@@ -32,4 +32,15 @@ export class CarrinhoComprasService {
       .reduce((prev, value) => prev + value, 0)
   }
 
+  aumentarQuantidade(item: CarrinhoItem) {
+    item.quantidade++;
+  }
+
+  diminuirQuantidade(item: CarrinhoItem) {
+    item.quantidade--;
+    if(item.quantidade === 0) {
+      this.removerItem(item)
+    }
+  }
+
 }
