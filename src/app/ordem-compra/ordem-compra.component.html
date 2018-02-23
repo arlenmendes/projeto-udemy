@@ -17,7 +17,7 @@
           <p>Seus Dados</p>
         </div>
         <div class="col-xs-12 col-sm-2">
-          <span class="help-block pull-right has-error-block" *ngIf="formularioOrdemCompra.hasError('emailsNaoConbinam')"></span>
+          <span class="help-block pull-right has-error-block" *ngIf="formularioOrdemCompra.hasError('emailsNaoConbinam')">E-mails não confere!</span>
         </div>
         <div class="col-sm-12 col-xs-12">
           <mt-input mensagemErro="Este campo deve conter ao menos 5 caracteres!" label="Nome">

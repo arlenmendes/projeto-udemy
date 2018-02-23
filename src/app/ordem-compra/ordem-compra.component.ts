@@ -53,12 +53,7 @@ export class OrdemCompraComponent implements OnInit {
     if (!email || !emailConfirmacao) {
       return undefined;
     }
-    if (email.value !== emailConfirmacao.value) {
-      console.log('dasdasdas')
-      return {emailsNaoConbinam: true};
-    }
-
-    return undefined;
+    return (email.value !== emailConfirmacao.value) ? {emailsNaoConbinam: true} : undefined;
   }
 
   itensCarrinho(): CarrinhoItem[] {
