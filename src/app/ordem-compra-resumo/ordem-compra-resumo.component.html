@@ -6,8 +6,8 @@
     <h2>Pedido Conluído</h2>
     <p>Seu pedido foi recebido pelo restaurante. Prepare a mesa que a comida está chegando!</p>
     <p><b>Avalie</b> sua experiência:</p>
-    <p><mt-avaliacao (avaliado)="avaliado = true" ></mt-avaliacao></p>
-    <p [hidden]="!avaliado">
+    <p><mt-avaliacao (avaliado)="avalia()" ></mt-avaliacao></p>
+    <p *ngIf="!avaliado">
       Obrigado pela avaliação!
     </p>
   </div>

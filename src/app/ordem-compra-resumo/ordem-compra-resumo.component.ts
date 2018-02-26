@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdemCompraResumoComponent implements OnInit {
 
+  avaliado: boolean
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  avalia() {
+    this.avaliado = true
   }
 
 }

@@ -4,8 +4,8 @@ import {RestaurantesComponent} from './restaurantes/restaurantes.component';
 import {RestauranteDetalheComponent} from './restaurante-detalhe/restaurante-detalhe.component';
 import {MenuComponent} from './restaurante-detalhe/menu/menu.component';
 import {RevisaoComponent} from './restaurante-detalhe/revisao/revisao.component';
-import {OrdemCompraComponent} from './ordem-compra/ordem-compra.component';
 import {OrdemCompraResumoComponent} from './ordem-compra-resumo/ordem-compra-resumo.component';
+import {NaoEncontradoComponent} from './nao-encontrado/nao-encontrado.component';
 
 export const ROUTES: Routes = [
   {path: '', component: HomeComponent},
@@ -18,6 +18,7 @@ export const ROUTES: Routes = [
       { path: 'revisao', component: RevisaoComponent}
     ]
   },
-  {path: 'ordem-compra', component: OrdemCompraComponent},
-  {path: 'ordem-compra-resumo', component: OrdemCompraResumoComponent}
+  {path: 'ordem-compra', loadChildren: './ordem-compra/ordem-compra.module#OrdemCompraModule'},
+  {path: 'ordem-compra-resumo', component: OrdemCompraResumoComponent},
+  { path: '**', component: NaoEncontradoComponent}
 ]
